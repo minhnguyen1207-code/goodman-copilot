@@ -132,7 +132,7 @@ def get_gemini_response(user_question: str, site_context: dict, score: float) ->
         return "⚠️ Gemini API key not configured. Add GEMINI_API_KEY to your Streamlit secrets to enable AI chat."
 
     genai.configure(api_key=GEMINI_API_KEY)
-    gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+    gemini_model = genai.GenerativeModel("gemini-2.0-flash")
 
     system_context = f"""You are the Goodman Decision Co-Pilot, an AI assistant for Goodman Group's
 Investment Committee. You help analysts evaluate data centre site acquisition candidates.
